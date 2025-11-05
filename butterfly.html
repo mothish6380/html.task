@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      height: 100vh;
+    }
+
+    /* Top section (80%) */
+    .top-section {
+      background-image: url("pattern.jpg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      position: relative;
+      color: white;
+    }
+
+    header {
+      background-color: orange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      padding: 20px;
+      width: 200px;
+      height: 100px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    header h2 {
+      margin: 0;
+    }
+
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    main {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 60px;
+      text-shadow:
+        3px 3px 8px black,
+        -2px -2px 5px red;
+      font-family: 'Anta', 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* Bottom section (20%) */
+    .bottom {
+      background-color: white;
+      height: 20vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 5px solid orange;
+      padding: 20px 40px;
+      gap: 20px;
+    }
+
+    /* Book image on left */
+    .book, .taj {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .book img, .taj img {
+      height: 120px;
+      width: auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    /* Details in the center */
+    .details {
+      flex: 2;
+      text-align: left;
+    }
+
+    .details h4 {
+      color: red;
+      font-size: 20px;
+      margin-bottom: 10px;
+      text-align: left;
+      margin-top: 40px;
+    }
+
+    .details ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .details ul li::before {
+      content: "★ ";
+      color: orange;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="top-section">
+    <header>
+      <h2>PREMIER <br><span>&#9733;Series&#9733;</span></h2>
+    </header>
+
+    <nav>
+      <h1>ABHIRAMI</h1>
+    </nav>
+
+    <main>
+      <h1>Hello<br>Summer</h1>
+    </main>
+  </div>
+
+  <div class="bottom">
+    <div class="book">
+      <img src="note book.jpg" alt="Notebook">
+    </div>
+
+    <div class="details">
+      <h4>PREMIUM QUALITY NOTEBOOK</h4>
+      <ul>
+        <li>Bright and Fine Quality Paper</li>
+        <li>Smooth Writing Surface</li>
+        <li>A-Grade Paper for Long Lasting Use</li>
+        <li>Non Transparent Pages</li>
+      </ul>
+    </div>
+
+    <div class="taj">
+      <img src="flag.jpg" alt="Taj Mahal">
+    </div>
+  </div>
+
+</body>
+</html>
