@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mothish’s Birthday Party 🎂</title>
+  <style>
+    /* 🌈 Animated Gradient Background */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      background: linear-gradient(270deg, #ff758c, #ff7eb3, #fad0c4, #fcb69f);
+      background-size: 800% 800%;
+      animation: gradientShift 10s ease infinite;
+      overflow: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* 🎊 Confetti animation */
+    @keyframes fall {
+      0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+    }
+
+    .confetti {
+      position: fixed;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+      animation: fall 4s linear infinite;
+      z-index: 0;
+    }
+
+    .confetti:nth-child(1) { left: 10%; background: #ff7eb3; animation-delay: 0s; }
+    .confetti:nth-child(2) { left: 25%; background: #ffd700; animation-delay: 1s; }
+    .confetti:nth-child(3) { left: 40%; background: #87ceeb; animation-delay: 2s; }
+    .confetti:nth-child(4) { left: 60%; background: #32cd32; animation-delay: 0.5s; }
+    .confetti:nth-child(5) { left: 80%; background: #ff4500; animation-delay: 1.5s; }
+    .confetti:nth-child(6) { left: 50%; background: #8a2be2; animation-delay: 2.5s; }
+
+    /* 🎁 Main Birthday Card */
+    .box {
+      background-image: url("Best-Birthday-Cake-image.jpg");
+      background-size: cover;
+      background-position: center;
+      width: 400px;
+      height: 400px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 100px auto 30px auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1;
+    }
+
+    .head {
+      color: white;
+      font-size: 32px;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px black;
+      background: rgba(0,0,0,0.4);
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 26px;
+      text-shadow: 2px 2px 4px black;
+      margin-top: 10px;
+    }
+
+    .details {
+      color: #dfcbcb;
+      font-size: 18px;
+      line-height: 1.8;
+      text-shadow: 1px 1px 3px black;
+      z-index: 1;
+    }
+
+    h1 {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: darkmagenta;
+      font-size: 30px;
+      margin: 20px auto;
+      width: 60%;
+      border-radius: 10px;
+      padding: 10px;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* 📱 Mobile responsive */
+    @media (max-width: 600px) {
+      .box {
+        width: 90%;
+        height: 300px;
+      }
+      h1 {
+        width: 80%;
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .details {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎊 Confetti falling behind -->
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+
+  <!-- 🎂 Birthday Invitation Box -->
+  <div class="box">
+    <div class="head">You're Invited!</div>
+  </div>
+
+  <h1>🎉 Mothish’s 21st Birthday 🎉</h1>
+
+  <div class="details">
+    📅 Date: November 15, 2025<br>
+    ⏰ Time: 6:00 PM<br>
+    📍 Venue: Saveetha University Hall, Chennai<br>
+    🎈 Dress Code: Colorful & Fun!
+  </div>
+
+</body>
+</html>
