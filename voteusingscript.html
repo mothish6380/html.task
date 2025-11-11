@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgeChecking</title>
+</head>
+<body>
+    <button onclick="promptbox()">Check Age</button>
+
+    <script>
+        function promptbox(){
+             let age=prompt("Enter your Age");
+             if(age>=18){
+                let check=confirm("Is Your Age Is Correct");
+                if(check){
+                    alert("You Are Eligible For Vote");
+                }
+                else{
+                    alert("Pls Check the correct Your Age");
+                }
+             }
+             else{
+                alert("you Are Not Eligible For Vote")
+             }
+
+        }
+    </script>
+    
+</body>
+</html>

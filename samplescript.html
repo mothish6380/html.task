@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <center>
+    <button onclick="alertbox()">AlertBoxclick</button>
+    <button onclick="confirmbox()">ConfirmBoxClick</button>
+    <button onclick="promptbox()">PromptBoxClick</button>
+
+    <script>
+        function alertbox(){
+            alert("this the alert box")
+
+        }
+        function confirmbox(){
+            let result =confirm("Do yo want processed");
+            if(result){
+                alert("You Pressed the Ok");
+            }else{
+                alert("you are pressed the cancel");
+            }
+        }
+        function promptbox(){
+            let name=prompt("Enter Your Name");
+            if(name){
+                alert("Your name is"+name);
+            }else{
+                alert("you Need fill the Name");
+            }
+        }
+    </script>
+    </center>
+    
+</body>
+</html>
+
+ <script>
+        function promtalert(){
+            let age=prompt("Enter Your Age");
+            if(age>18){
+                let check =confirm("is your age is correct");
+                if(check){
+                    alert("you are elgile for vote");
+                }
+                else{
+                    alert("pls check your age");
+                }
+            
+            }
+            else{
+                alert("you are not elgible for vote");
+            }
+        }
+    </script>
