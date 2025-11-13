@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        color: red;
+    }
+    #box{
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+    }
+    button{
+        width: 100px;
+        height: 20px;
+        padding: 20px ;
+        background-color: azure;
+        border-radius: 10px;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Mouse Events with Separate Buttons</h1>
+
+    <button onclick="singleclick()">Singleclick</button>
+    <button ondblclick="doubleclick()">DoubleClick</button>
+    <button onmouseover="hover()">Mouseover</button>  
+    <button onmouseout="out()">Mouseout</button>  
+    <button onmousemove="mousemove()">Mousemove</button>
+    <div id="box">EventBox</div>
+    <script>
+        let box=document.getElementById("box");
+        function singleclick(){
+            box.style.backgroundColor="blue"
+
+            box.innerHTML="SigleClicked";
+
+        }
+
+        function doubleclick(){
+            alert("You are Click The DobleClick")
+        }
+        function hover(){
+            box.style.backgroundColor="aqua";
+            box.innerHTML="Mouse Hover"
+        }
+
+        function out(){
+            box.style.backgroundColor="red";
+            box.innerHTML="Mousemoved"
+        }
+         function mouseMove(event) {
+      box.style.backgroundColor = "purple";
+      box.innerHTML = X: ${event.clientX}, Y: ${event.clientY};
+         }
+
+
+    </script>
+</body>
+</html>

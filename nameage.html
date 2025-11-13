@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlertBox</title>
+</head>
+<body>
+    <form onsubmit="showAlert(event)">
+        <label>Username</label><br>
+        <input type="text" id="username" placeholder="Enter Your Name"><br>
+        <label>Age</label><br>
+        <input type="number" id="age" placeholder="Enter your Age"><br>
+        
+        <button type="submit">Sumbit</button>
+    </form>
+    <script>
+        function showAlert(event){
+            event.preventDefault();
+
+            let username=document.getElementById("username").value;
+            let age=document.getElementById("age").value;
+
+            alert("This is your name" +username+ "your age is" +age)
+        }
+    </script>
+</body>
+</html>
