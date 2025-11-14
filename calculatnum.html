@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .continer{
+        background: antiquewhite;
+        max-width: 600px;
+        margin: auto;
+        margin-top: 100px;
+        text-align: center;
+
+    }
+    h1{
+        text-align: center;
+    }
+    button {
+            padding: 8px 15px;
+            margin: 10px;
+            border: none;
+            background-color: steelblue;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input{
+            border-radius: 5px;
+            border: 1px solid;
+            margin: 10px;
+            padding: 5px;
+        }
+        #result{
+            font-weight: bold;
+            
+        }
+
+</style>
+<body>
+    <div class="continer">
+    <h1>NUMER CALCULTOR</h1>
+    <input type="number" id="firstnumber" placeholder="Enter the First Number"><br>
+    <input type="number" id="secondnumber" placeholder="Enter the second number"><br>
+
+
+    <button type="button" onclick="calcultor('+')">ADD</button>
+    <button type="button" onclick="calcultor('-')">SUB</button>
+    <button type="button" onclick="calcultor('*')">MULTIPLE</button>
+        <div id="result"></div>
+
+    </div>
+    <script>
+        function calcultor(Operators){
+
+            let num1=parseFloat(document.getElementById('firstnumber').value);
+            let num2=parseFloat(document.getElementById('secondnumber').value);
+            let Result;
+
+            if(isNaN(num1) || isNaN(num2)){
+                alert("Please fill the both numbers");
+                return;
+            }
+            switch(Operators){
+                case '+':result= num1 + num2; break;
+                case '-':result= num1 - num2; break;
+                case '*':result= num1 * num1;break;
+            }
+
+            document.getElementById("result").innerText="Result" + result;
+        }
+    </script>
+</body>
+</html>

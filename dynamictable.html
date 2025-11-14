@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table</title>
+</head>
+<style>
+    .continer{
+        text-align: center;
+        background-color: antiquewhite;
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+
+    }
+    h2{
+        text-align: center;
+        position: sticky;
+    }
+    button{
+        padding: 10px;
+        margin-top: 50px;
+        border-radius: 10px;
+        background-color: skyblue;
+        cursor: pointer;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 50px;
+    }
+    td,th{
+        padding: 10px;
+        border: 1px solid red;
+
+    }
+    th{
+        background-color: bisque;
+    }
+    
+    form{
+    flex-wrap: wrap;
+    border-radius: 10px;
+    }
+    input{
+        border-radius: 5px;
+        border: 1px solid;
+        text-align: center;
+        gap: 50px;
+        padding: 10px;
+
+    }
+
+</style>
+<body>
+
+    
+    <div class="continer">
+        <form id="dataForm">
+        <h2>Dynamic Table (Add Only)</h2>
+        <input type="text" id="product" placeholder="Product Name" required>
+        <input type="text" id="issue" placeholder="Issue" required>
+        <input type="number" id="qty" min="1" placeholder="Quantity" required><br>
+        <button type="button" onclick="addRow()">AddRows</button>
+        </form>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Sno</th>
+                    <th>Product</th>
+                    <th>Issue</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        let count=0;
+        function addRow(){
+            const product=document.getElementById('product').value.trim();
+            const issue=document.getElementById('issue').value.trim();
+            const qty=document.getElementById('qty').value.trim();
+
+            if(product == ""|| issue == ""|| qty==""){
+                alert("pls fill the details");
+                return;
+            }
+            count++;
+            const table=document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+            const newRow=table.insertRow();
+
+            newRow.insertCell(0).textContent=count;
+            newRow.insertCell(1).textContent=product;
+            newRow.insertCell(2).textContent=issue;
+            newRow.insertCell(3).textContent=qty;
+
+            document.getElementById('product').value="";
+            document.getElementById('issue').value="";
+            document.getElementById('qty').value="";
+
+        }
+    </script>
+    
+</body>
+</html>
